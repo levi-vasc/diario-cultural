@@ -1,0 +1,66 @@
+/* Paleta de Cores Definida:
+   Azul Claro para Fundo: #ADD8E6
+   Laranja para Seleto/Conteúdo: #f39c12
+   Texto em Laranja/Conteúdo (contraste): #2c3e50 (Azul muito escuro)
+   Azul Escuro para Botões Normais/Detalhamento: #34495e
+   Texto em Botões Normais: #ffffff (Branco)
+   Cinza Claro Padrão: #F0F0F0
+   Texto Padrão: #333333
+*/
+
+/* Estilo para o fundo geral da aplicação (o azul claro) - aplicado ao .root do BorderPane */
+.root {
+    -fx-background-color: #ADD8E6;
+}
+
+/* Estilo para o título principal do menu (se você tiver um, como "DIÁRIO CULTURAL") */
+.title-label {
+    -fx-text-fill: #ffffff; /* Branco */
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-background-color: #34495e; /* Fundo azul escuro */
+    -fx-padding: 10px 30px;
+    -fx-border-radius: 0 0 10px 0;
+    -fx-background-radius: 0 0 10px 0;
+    -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.5) , 0,0,0,2 );
+}
+
+/* As classes .menu-button e .menu-button-selected não estão mais sendo usadas pelo que entendi,
+   mas as mantive aqui para sua referência caso ainda precise delas em outro lugar.
+   Se não forem usadas, pode removê-las. */
+.button { /* OBSERVAÇÃO: esta classe não está sendo usada nos seus FXMLs recentes */
+    -fx-background-color: #34495e;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.5) , 0,0,0,2 );
+}
+.button:hover { /* OBSERVAÇÃO: esta classe não está sendo usada nos seus FXMLs recentes */
+    -fx-background-color: #f39c12;
+    -fx-text-fill: #2c3e50;
+    -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.5) , 0,0,0,2 );
+}
+.button-selected { /* OBSERVAÇÃO: esta classe não está sendo usada nos seus FXMLs recentes */
+    -fx-background-color: #f39c12;
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.5) , 0,0,0,2 );
+}
+
+.arrow-button {
+    -fx-background-color: transparent; /* Fundo transparente */
+    -fx-border-color: transparent;     /* Sem borda */
+    -fx-padding: 0 5px;                /* Padding mínimo para a seta */
+    -fx-text-fill: #2c3e50;            /* Cor da seta (azul escuro para contraste) */
+    -fx-font-size: 10px;               /* Tamanho da fonte para a seta */
+    -fx-font-weight: bold;             /* Deixa a seta mais visível */
+    -fx-cursor: hand;                  /* Indica que é clicável */
+    -fx-graphic-text-gap: 0;           /* Garante que não há espaço extra se houver graphic */
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diariocultural.controller.CadastroFilmeController">
+   <children>
+      <GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="184.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="184.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Título:" GridPane.halignment="RIGHT" />
+            <TextField fx:id="field_titulo" GridPane.columnIndex="1" />
+            <Label layoutX="10.0" layoutY="202.0" text="Gênero:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" />
+            <Label layoutX="310.0" layoutY="201.0" text="Lançamento:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <TextField fx:id="field_ano" layoutX="460.0" layoutY="197.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label layoutX="10.0" layoutY="335.0" text="Duração:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <TextField fx:id="field_duracao" layoutX="160.0" layoutY="331.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label layoutX="361.0" layoutY="201.0" text="Roteiro:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <TextField fx:id="field_roteiro" layoutX="160.0" layoutY="197.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label layoutX="64.0" layoutY="335.0" text="Elenco:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <TextField fx:id="field_elenco" layoutX="160.0" layoutY="331.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label layoutX="366.0" layoutY="252.0" text="Título original:" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <TextField fx:id="field_titulo_original" layoutX="460.0" layoutY="248.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label layoutX="47.0" layoutY="352.0" text="Onde assistir:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <TextField fx:id="field_onde_assistir" layoutX="160.0" layoutY="348.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button fx:id="bt_salvar" mnemonicParsing="false" onAction="#handleSalvarFilme" styleClass="save-button" stylesheets="@cadastrostyle.css" text="Cadastrar Filme" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3">
+               <children>
+                  <TextField fx:id="field_genero" />
+                  <Button fx:id="bt_genero" mnemonicParsing="false" styleClass="arrow-button" stylesheets="@cadastrostyle.css" text="v" StackPane.alignment="CENTER_RIGHT" />
+               </children>
+            </StackPane>
+            <TextField fx:id="field_direcao" layoutX="416.0" layoutY="270.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label layoutX="334.0" layoutY="274.0" text="Direção:" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" stylesheets="@buscastyle.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diariocultural.controller.BuscaController">
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="bt_voltar" alignment="CENTER" mnemonicParsing="false" onAction="#voltarMenu" text="&lt;">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Button>
+            <HBox alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                  <Button fx:id="livro" mnemonicParsing="false" onAction="#mostrarPainelLivro" text="Livro" />
+                  <Button fx:id="filme" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#mostrarPainelFilme" text="Filme" />
+                  <Button fx:id="serie" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#mostrarPainelSerie" text="Série" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <StackPane fx:id="painel_busca" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

@@ -1,0 +1,155 @@
+/* Paleta de Cores Definida:
+   Azul Claro para Fundo: #ADD8E6
+   Laranja para Seleto/Conteúdo: #f39c12
+   Texto em Laranja/Conteúdo (contraste): #2c3e50 (Azul muito escuro)
+   Azul Escuro para Botões Normais/Detalhamento: #34495e
+   Texto em Botões Normais: #ffffff (Branco)
+   Cinza Claro Padrão: #F0F0F0
+   Texto Padrão: #333333
+*/
+
+/* Estilo para o fundo geral da aplicação (o azul claro) - aplicado ao .root do BorderPane */
+.root {
+    -fx-background-color: #34495e;
+}
+
+/* Estilo padrão para os botões do menu lateral (não selecionados) */
+.button { /* NOME ATUALIZADO */
+    -fx-background-color: #34495e; /* Azul escuro */
+    -fx-text-fill: #ffffff;      /* Texto branco */
+    -fx-font-size: 14px;         /* Ajustado para o tamanho do seu botão */
+    -fx-font-weight: bold;
+    -fx-padding: 8px 10px;
+    -fx-cursor: hand;
+    -fx-text-alignment: center; /* Alinha o texto ao centro do botão */
+    -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.5) , 0,0,0,2 );
+}
+
+.button-selected { /* OBSERVAÇÃO: esta classe não está sendo usada nos seus FXMLs recentes */
+    -fx-background-color: #ADD8E6;
+    -fx-text-fill: #2c3e50;
+    -fx-font-size: 14px;         /* Ajustado para o tamanho do seu botão */
+    -fx-font-weight: bold;
+    -fx-padding: 8px 10px;
+    -fx-cursor: hand;
+    -fx-text-alignment: center;
+    -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.5) , 0,0,0,2 );
+}
+
+/* Efeito ao passar o mouse sobre os botões secundários */
+.button:hover {
+    -fx-background-color:#ADD8E6; /* Laranja ao passar o mouse */
+    -fx-text-fill: #ffff;      /* Texto azul escuro no hover */
+    -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.5) , 0,0,0,2 );
+}
+
+/* --- CLASSE .content-area ESSENCIAL QUE ESTAVA FALTANDO --- */
+/* Estilo para o painel de conteúdo (onde os formulários são carregados) */
+.content-area {
+    -fx-background-color: #ADD8E6; /* Fundo LARANJA, combinando com o botão selecionado */
+    -fx-text-fill: #2c3e50;      /* Cor do texto padrão para elementos dentro dele (azul escuro) */
+    -fx-border-width: 0px;       /* Sem borda externa para se ligar perfeitamente */
+    /* Cantos retos na esquerda (0px) para ligar com o botão, arredondados na direita (5px) */
+    -fx-border-radius: 0 5px 5px 0;
+    -fx-background-radius: 0 5px 5px 0;
+    -fx-padding: 20px; /* Adicione um padding interno ao painel para o conteúdo não ficar colado */
+    -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.5) , 0,0,0,2 ); /* Adicione sombra se quiser */
+}
+
+/* --- Outras classes que você tinha, revisadas --- */
+
+/* Estilo para Labels gerais (se você não tiver uma classe mais específica para o título) */
+/* Se este .label for para os labels de input (Título:, ISBN: etc.) */
+.label {
+    -fx-text-fill: #2c3e50; /* Azul escuro, para contraste no fundo LARANJA do content-area */
+    -fx-font-size: 14px; /* Ajuste o tamanho da fonte para campos de formulário */
+    -fx-font-weight: normal; /* Normal, não negrito, para campos de form */
+    -fx-effect: none; /* Remova sombra se não quiser em todos os labels */
+}
+
+/* Estilo para TextFields (campos de input) */
+.text-field { /* Se esta for a classe para todos os TextFields */
+    -fx-background-color: #ffffff; /* Fundo branco */
+    -fx-border-color: #34495e;     /* Borda azul escuro */
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #2c3e50;        /* Texto azul escuro */
+    -fx-prompt-text-fill: #7f8c8d; /* Cor do texto de dica */
+    -fx-effect: none; /* Remova a sombra se não quiser */
+}
+
+/* As classes .menu-button e .menu-button-selected não estão mais sendo usadas pelo que entendi,
+   mas as mantive aqui para sua referência caso ainda precise delas em outro lugar.
+   Se não forem usadas, pode removê-las. */
+.ok-button { /* OBSERVAÇÃO: esta classe não está sendo usada nos seus FXMLs recentes */
+    -fx-background-color: #34495e;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 10px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.5) , 0,0,0,2 );
+}
+
+.ok-button:hover { /* OBSERVAÇÃO: esta classe não está sendo usada nos seus FXMLs recentes */
+    -fx-background-color: #f39c12;
+    -fx-text-fill: #2c3e50;
+    -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.5) , 0,0,0,2 );
+}
+
+.ok-button-selected { /* OBSERVAÇÃO: esta classe não está sendo usada nos seus FXMLs recentes */
+    -fx-background-color: #f39c12;
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.5) , 0,0,0,2 );
+}
+
+.table-view {
+    -fx-background-color: #ffb833;
+    -fx-border-width: 2px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f39c12; /* Azul escuro, para bom contraste com texto branco ou claro */
+}
+
+/* Estilo para as células da tabela (o conteúdo de cada célula) */
+.table-view .table-cell {
+    -fx-text-fill: #2c3e50; /* Texto azul escuro */
+    -fx-background-color: transparent; /* Permite que o fundo da linha/tabela apareça */
+}
+
+/* Estilo para as linhas da tabela (pares e ímpares para alternar ou manter a mesma cor) */
+.table-view .table-row-cell:odd {
+    -fx-background-color: derive(#fab74a, 20%); /* Laranja ligeiramente mais claro para linhas ímpares */
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: #fab74a; /* Laranja padrão para linhas pares */
+}
+
+/* Estilo para quando o mouse passa sobre uma linha */
+.table-view .table-row-cell:hover {
+    -fx-background-color: derive(#fab74a, -10%); /* Laranja ligeiramente mais escuro ao hover */
+}
+
+/* Estilo para a linha selecionada */
+.table-view .table-row-cell:selected {
+    -fx-background-color: #ADD8E6; /* Azul claro para a seleção */
+    -fx-text-fill: #2c3e50; /* Texto azul escuro para contraste na seleção */
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #2c3e50; /* Texto azul escuro para contraste no cabeçalho laranja */
+    -fx-font-weight: bold;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f39c12; /* Fundo do cabeçalho laranja */
+}

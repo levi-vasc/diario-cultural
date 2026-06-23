@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@menustyle.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diariocultural.controller.MenuController">
+   <children>
+      <Label alignment="CENTER" layoutX="242.0" layoutY="84.0" prefHeight="74.0" prefWidth="315.0" styleClass="title-label" text="Diário Cultural" />
+      <VBox layoutX="344.0" layoutY="243.0" spacing="20.0">
+         <children>
+            <Button fx:id="cadastro" mnemonicParsing="false" onAction="#irCadastro" text="Cadastrar" />
+            <Button fx:id="busca" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#irBusca" text="Buscar" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diariocultural.controller.DetalhesObraController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label text="Detalhes da Obra">
+        <font>
+            <Font name="System Bold" size="24.0" />
+        </font>
+    </Label>
+    <GridPane hgap="10.0" vgap="5.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="10.0" prefWidth="300.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" /> <RowConstraints vgrow="SOMETIMES" /> <RowConstraints vgrow="SOMETIMES" /> <RowConstraints vgrow="SOMETIMES" /> <RowConstraints vgrow="SOMETIMES" /> <RowConstraints vgrow="SOMETIMES" /> <RowConstraints vgrow="SOMETIMES" /> <RowConstraints vgrow="SOMETIMES" /> <RowConstraints vgrow="SOMETIMES" /> </rowConstraints>
+        <children>
+            <Label text="Título:" GridPane.rowIndex="0" styleClass="label"/>
+            <Label fx:id="lblTitulo" text="[Título]" GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="label"/>
+            <Label text="Gênero:" GridPane.rowIndex="1" styleClass="label"/>
+            <Label fx:id="lblGenero" text="[Gênero]" GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="label"/>
+            <Label text="Lançamento:" GridPane.rowIndex="2" styleClass="label"/>
+            <Label fx:id="lblAnoLancamento" text="[Ano]" GridPane.columnIndex="1" GridPane.rowIndex="2" styleClass="label"/>
+
+            <Label fx:id="lblEncerramentoLabel" text="Encerramento:" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblEncerramento" text="[Encerramento]" GridPane.columnIndex="1" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblElencoLabel" text="Elenco:" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblElenco" text="[Elenco]" GridPane.columnIndex="1" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblTituloOriginalLabel" text="Título Original:" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblTituloOriginal" text="[Título Original]" GridPane.columnIndex="1" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblOndeAssistirLabel" text="Onde Assistir:" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblOndeAssistir" text="[Onde Assistir]" GridPane.columnIndex="1" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblNumTemporadasLabel" text="Nº Temporadas:" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblNumTemporadas" text="[Nº Temporadas]" GridPane.columnIndex="1" visible="false" managed="false" styleClass="label"/>
+
+            <Label fx:id="lblDiretorLabel" text="Diretor:" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblDiretor" text="[Diretor]" GridPane.columnIndex="1" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblDuracaoLabel" text="Duração:" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblDuracao" text="[Duração]" GridPane.columnIndex="1" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblRoteiroLabel" text="Roteiro:" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblRoteiro" text="[Roteiro]" GridPane.columnIndex="1" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblAutorLabel" text="Autor:" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblAutor" text="[Autor]" GridPane.columnIndex="1" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblEditoraLabel" text="Editora:" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblEditora" text="[Editora]" GridPane.columnIndex="1" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblIsbnLabel" text="ISBN:" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblIsbn" text="[ISBN]" GridPane.columnIndex="1" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblExemplarLabel" text="Possui Exemplar:" visible="false" managed="false" styleClass="label"/>
+            <Label fx:id="lblExemplar" text="[Sim/Não]" GridPane.columnIndex="1" visible="false" managed="false" styleClass="label"/>
+        </children>
+    </GridPane>
+    <VBox alignment="CENTER_LEFT" spacing="5.0">
+        <children>
+            <Label text="Sua Avaliação:" />
+            <Slider fx:id="sliderNota" blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="0.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+            <Label text="Seu Review:" />
+            <TextArea fx:id="txtAreaReview" prefHeight="100.0" promptText="Escreva seu review aqui..." wrapText="true" />
+        </children>
+        <VBox.margin>
+            <Insets top="10.0" />
+        </VBox.margin>
+    </VBox>
+    <HBox alignment="CENTER" spacing="15.0">
+        <children>
+            <Button onAction="#handleSalvarAvaliacao" text="Salvar Avaliação/Review" />
+            <Button onAction="#handleExcluirObra" text="Excluir Obra" style="-fx-background-color: #ff6666;" />
+        </children>
+        <VBox.margin>
+            <Insets top="15.0" />
+        </VBox.margin>
+    </HBox>
+</VBox>
