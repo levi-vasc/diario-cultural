@@ -20,23 +20,20 @@ Aplicação desktop para catalogar e organizar obras culturais — filmes, séri
 
 ## Pré-requisitos
 
-- JDK 21 instalado ([download](https://adoptium.net/))
-- IntelliJ IDEA (recomendado)
+- JDK 21 instalado
+- Maven
 
 ## Como executar
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/diario-cultural.git
+   git clone https://github.com/levi-vasc/diario-cultural.git
    ```
 
-2. Abra o projeto no IntelliJ IDEA
-
-3. Na aba **Maven** (lado direito), navegue até:
+2. Vá para a raiz do projeto e execute:
+   ```bash
+   mvn javafx:run
    ```
-   Plugins → javafx → javafx:run
-   ```
-   E dê dois cliques em **javafx:run**
 
 > O Maven baixará todas as dependências automaticamente na primeira execução.
 
